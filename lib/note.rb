@@ -3,6 +3,4 @@ class Note
     @title = title
     @body = body
   end
-  attr_reader : title
-  attr_reader : body
 end
