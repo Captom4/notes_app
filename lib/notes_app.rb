@@ -1,10 +1,10 @@
-class Notes_app
+class NotesApp
   def initialize
     @stored_notes = Array.new
   end
   
   def add_note(title, body)
-    note = Not.new(title, body)
+    note = Note.new(title, body)
     @stored_notes.push(note)
   end
 
@@ -22,7 +22,7 @@ class Notes_app
     end
   end
 
-  def choose_note(target_title)
+  def get_note(target_title)
     note = (@stored_notes.select { |a_note| a_note.title == target_title })[0]
     puts note.title
     puts note.body
